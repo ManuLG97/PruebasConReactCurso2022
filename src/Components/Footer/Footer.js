@@ -7,7 +7,7 @@ function formataboutus(text) {
   function Footer() {
     const text = {
       presentacion: 'Somos un grupo de programadores llamados ',
-      lastName: 'Manuel López, Aitor y Rodolfo'
+      lastName: 'Manuel López, Andy y Rodolfo'
     };
 
     const element = (

@@ -1,0 +1,38 @@
+#container {width:70%}
+
+.campo {
+width:100%;
+height: 800px;
+background-color: green;
+text-align: center;
+align-items: center;
+}
+
+.delanteroscampo {
+  width:100%;
+  display: flex;
+ 
+}
+
+.mediocampistascampo {
+  width:100%;
+  display: flex; }
+
+.defensascampo {
+    width:100%;
+    display: flex; }
+
+
+.cartajugador{
+  border: 1px solid red;
+  height: 150px;  
+  width:20%;
+  margin: auto;
+  margin-bootom:10px;
+  background: burlywood;
+
+}
+
+
+
+
