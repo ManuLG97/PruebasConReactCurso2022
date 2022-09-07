@@ -44,7 +44,7 @@ let jugadorarealmadridmisa = {
   Equipo: 'Real Madrid',
   Goles: 0,
   Asistencias: 1,
-  Paradas: 50,
+  Paradas: 51,
   PorteriaImbatida: 2,
   TarjetasAmarillas: 1,
   TarjetasRojas: 0,
@@ -160,20 +160,36 @@ for (i = 0; i < jugadorarealmadridmisa.TarjetasRojas; i++) {
 
 for (i = 0; i < jugadorarealmadridmisa.PorteriaImbatida; i++) {
 
-  jugadorarealmadridmisa.Puntos = jugadorarealmadridmisa.Puntos + 2; }
+  jugadorarealmadridmisa.Puntos = jugadorarealmadridmisa.Puntos + 2; 
+}
+
+let jugadoraparadas = (jugadorarealmadridmisa.Paradas / 2);
+console.log(jugadoraparadas);
+
+if ((jugadorarealmadridmisa.Paradas % 2) === 0) {
+
+  jugadorarealmadridmisa.Puntos = jugadorarealmadridmisa.Puntos + jugadoraparadas; 
+}
+
+ if ((jugadorarealmadridmisa.Paradas % 2) != 0) {
+  let jugadoraparadasimpares = jugadoraparadas - 1.5;
+  jugadorarealmadridmisa.Puntos = jugadorarealmadridmisa.Puntos + jugadoraparadasimpares; 
+}
+
 
 
 //SUMA DE PUNTOS CLIENTE
 
 for (i = 0; i < 2; i++) {
-  clientejugador.PuntosTotales =  jugadorafcbarcelonaalexiaputellas.Puntos +  jugadorarealmadridolgacarmona.Puntos + jugadorrealmadridviniciusjunior.Puntos;
+  clientejugador.PuntosTotales =  jugadorafcbarcelonaalexiaputellas.Puntos +  jugadorarealmadridolgacarmona.Puntos + jugadorrealmadridviniciusjunior.Puntos + jugadorarealmadridmisa.Puntos;
   }
 
 //EMPIEZA EL CODIGO QUE PASAMOS AL FICHERO APP.JS
     return (
 
       <div id="container">
-      <div>El jugador {clientejugador.Nombre} acumula un total de {clientejugador.PuntosTotales}
+<br/>
+      <div>El jugador {clientejugador.Nombre} acumula un total de {clientejugador.PuntosTotales} <br/><br/>
         <div class="campo"> <br/>
           <div class="delanteroscampo"> 
           <div class="cartajugador"><div> {jugadorarealmadridolgacarmona.Nombre}  </div> <div>{jugadorarealmadridolgacarmona.Equipo}</div> <div>  {jugadorarealmadridolgacarmona.Puntos} </div></div>
