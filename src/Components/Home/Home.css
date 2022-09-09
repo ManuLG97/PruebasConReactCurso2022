@@ -1,4 +1,6 @@
-#container {width:70%}
+#container {width:100%}
+
+h1 {text-align: center; color:red;}
 
 .campo {
 width:100%;
@@ -28,9 +30,16 @@ align-items: center;
   height: 150px;  
   width:20%;
   margin: auto;
-  margin-bootom:10px;
   background: burlywood;
 
+}
+
+.estadisticasjugador {
+  border: 1px solid red;
+  height: auto;  
+  width:20%;
+  margin: auto;
+  background: burlywood;
 }
 
 

@@ -1,6 +1,18 @@
-import './Header.css';
+import './Home.css';
+import { useNavigate } from 'react-router-dom';
 
-function Header() {
+function Home() {
+
+
+  const navigate = useNavigate();
+
+  const GoToAlexia = () => {
+      navigate('/alexiaputellas', {
+          replace: true
+      });
+  }
+
+
 let i = 0;
 
 let clientejugador = {
@@ -23,7 +35,8 @@ let jugadorafcbarcelonaalexiaputellas = {
     Nombre: 'Alexia Putellas',
     Equipo: 'FC Barcelona',
     Goles: 18,
-    Asistencias: 5,
+    Asistencias: 5, 
+    PorteriaImbatida: 2,
     TarjetasAmarillas: 3,
     TarjetasRojas: 0,
     Puntos: 0
@@ -34,6 +47,7 @@ let jugadorrealmadridviniciusjunior = {
   Equipo: 'Real Madrid',
   Goles: 10,
   Asistencias: 10,
+  PorteriaImbatida: 2,
   TarjetasAmarillas: 1,
   TarjetasRojas: 0,
   Puntos: 0
@@ -44,7 +58,7 @@ let jugadorarealmadridmisa = {
   Equipo: 'Real Madrid',
   Goles: 0,
   Asistencias: 1,
-  Paradas: 51,
+  Paradas: 50,
   PorteriaImbatida: 2,
   TarjetasAmarillas: 1,
   TarjetasRojas: 0,
@@ -189,7 +203,7 @@ for (i = 0; i < 2; i++) {
 
       <div id="container">
 <br/>
-      <div>El jugador {clientejugador.Nombre} acumula un total de {clientejugador.PuntosTotales} <br/><br/>
+      <div> <h1>El jugador {clientejugador.Nombre} acumula un total de {clientejugador.PuntosTotales} <br/><br/></h1>
         <div class="campo"> <br/>
           <div class="delanteroscampo"> 
           <div class="cartajugador"><div> {jugadorarealmadridolgacarmona.Nombre}  </div> <div>{jugadorarealmadridolgacarmona.Equipo}</div> <div>  {jugadorarealmadridolgacarmona.Puntos} </div></div>
@@ -203,7 +217,9 @@ for (i = 0; i < 2; i++) {
          </div> <br/>
          <div class="defensascampo">
           <div class="cartajugador"><div> {jugadorarealmadridolgacarmona.Nombre}  </div> <div>{jugadorarealmadridolgacarmona.Equipo}</div> <div>  {jugadorarealmadridolgacarmona.Puntos} </div></div>
-          <div class="cartajugador"> <div> {jugadorafcbarcelonaalexiaputellas.Nombre}  </div> <div>{jugadorafcbarcelonaalexiaputellas.Equipo}</div> <div>  {jugadorafcbarcelonaalexiaputellas.Puntos} </div></div>
+          
+          <div class="cartajugador"> <a onClick={GoToAlexia}> <div> {jugadorafcbarcelonaalexiaputellas.Nombre}  </div> </a> <div>{jugadorafcbarcelonaalexiaputellas.Equipo}</div> <div>  {jugadorafcbarcelonaalexiaputellas.Puntos} </div></div>
+         
           <div class="cartajugador"> <div> {jugadorrealmadridviniciusjunior.Nombre}  </div> <div>{jugadorrealmadridviniciusjunior.Equipo}</div> <div>  {jugadorrealmadridviniciusjunior.Puntos} </div></div>  
           <div class="cartajugador"> <div> {jugadorrealmadridviniciusjunior.Nombre}  </div> <div>{jugadorrealmadridviniciusjunior.Equipo}</div> <div>  {jugadorrealmadridviniciusjunior.Puntos} </div></div>  
          </div> <br/>
@@ -217,4 +233,4 @@ for (i = 0; i < 2; i++) {
 }
 
   
-export default Header;
+export default Home;
