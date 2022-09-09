@@ -1,5 +1,6 @@
 import './Home.css';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
 function Home() {
 
@@ -12,6 +13,11 @@ function Home() {
       });
   }
 
+  const GoToHome = () => {
+    navigate('/', {
+        replace: true
+    });
+}
 
 let i = 0;
 
@@ -202,6 +208,7 @@ for (i = 0; i < 2; i++) {
     return (
 
       <div id="container">
+        <Header/>
 <br/>
       <div> <h1>El jugador {clientejugador.Nombre} acumula un total de {clientejugador.PuntosTotales} <br/><br/></h1>
         <div class="campo"> <br/>

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import Header from '../../Header/Header';
 
 function JugadoresLesionados() {
 
@@ -53,8 +54,9 @@ for (i = 0; i < jugadorafcbarcelonaalexiaputellas.TarjetasRojas; i++) {
     return (
 
       <div id="container">
-     
-      <div > <div class="campo"> <br/>
+       <Header/>
+      <div > <div class="campo">
+    
       <h1>JUGADORES LESIONADOS</h1>
         <div class="estadisticasjugador"> <div> {jugadorafcbarcelonaalexiaputellas.Nombre}  </div> <br/>
         <div>{jugadorafcbarcelonaalexiaputellas.Equipo}</div> <br/>
@@ -68,10 +70,7 @@ for (i = 0; i < jugadorafcbarcelonaalexiaputellas.TarjetasRojas; i++) {
         
         </div>
         </div>
-        <a onClick={GoToHome}>  
-        <div>Volver a mi plantillas</div>
-        </a>
-        </div>
+     </div>
       );
 }
 

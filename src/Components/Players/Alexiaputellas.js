@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
 function Alexiaputellas() {
 
@@ -59,8 +60,7 @@ for (i = 0; i < jugadorafcbarcelonaalexiaputellas.TarjetasRojas; i++) {
     return (
 
       <div id="container">
-       <a onClick={GoToJugadoresLesionados}> <div>JUGADORES LESIONADOS</div> </a>
-<br/>
+      <Header/><br/>
       <div > <h1>La jugadora {jugadorafcbarcelonaalexiaputellas.Nombre} acumula un total de {jugadorafcbarcelonaalexiaputellas.Puntos} </h1><br/><br/>
         <div class="campo"> <br/>
         <div class="estadisticasjugador"> <div> {jugadorafcbarcelonaalexiaputellas.Nombre}  </div> <br/>
@@ -75,9 +75,6 @@ for (i = 0; i < jugadorafcbarcelonaalexiaputellas.TarjetasRojas; i++) {
         
         </div>
         </div>
-        <a onClick={GoToHome}>  
-        <div>Volver a mi plantillas</div>
-        </a>
         </div>
       );
 }
