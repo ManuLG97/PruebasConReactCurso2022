@@ -22,7 +22,7 @@ function Header() {
 
 //EMPIEZA EL CODIGO QUE PASAMOS AL FICHERO APP.JS
     return (
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" onClick={GoToHome}>Home <span class="sr-only">(current)</span></a>
